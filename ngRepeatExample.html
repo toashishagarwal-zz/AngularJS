@@ -21,7 +21,7 @@
 	<h3>ngRepeat example with dupes </h3>
 	<div class="container" ng-init="no = [11,3,4,4,5]  ">
 		<ul>
-			<li ng-repeat="n in no track by $index" >{{n}} </li>
+			<li ng-repeat="n in no track by $index" >{{n}} is at {{$index + 1 }} position</li>
 		</ul>
 		
 	</div>
