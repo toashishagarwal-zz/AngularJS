@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Sample Angular JS application - ngRepeat example</title>
+	<script src="angular.min.js" type="text/javascript" charset="utf-8" async defer>
+	</script>
+</head>
+<body>
+	<div class="container" ng-init="names=['Meenu','Piku','Pihu','Monu', 'Ashu']">
+
+	<h3>Iterating throught the name using ng-repeat Directive</h3>
+
+	<ul>
+		<li ng-repeat="name in names"> {{name}}</li>
+	</ul>
+		
+	</div>
+	
+</body>
+</html>
