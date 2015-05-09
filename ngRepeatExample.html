@@ -6,15 +6,25 @@
 	</script>
 </head>
 <body>
-	<div class="container" ng-init="names=['Meenu','Piku','Pihu','Monu', 'Ashu']">
+	<!-- NOTE : ngRepeat does not allow duplicates by default
+		Inorder to allow dupes, we need to use track by index
+	-->
+	<div class="container" ng-init="names=['Meenu','Piku','Pihu','Monu', 'Ashu'] ">
+		<h3>Iterating throught the name using ng-repeat Directive</h3>
+		<ul>
+			<li ng-repeat="name in names"> {{name}}</li>
+		</ul>		
+	</div>
 
-	<h3>Iterating throught the name using ng-repeat Directive</h3>
-
-	<ul>
-		<li ng-repeat="name in names"> {{name}}</li>
-	</ul>
+	<!-- ngRepeat for dupes -->
+	
+	<h3>ngRepeat example with dupes </h3>
+	<div class="container" ng-init="no = [11,3,4,4,5]  ">
+		<ul>
+			<li ng-repeat="n in no track by $index" >{{n}} </li>
+		</ul>
 		
 	</div>
-	
+
 </body>
 </html>
